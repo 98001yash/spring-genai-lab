@@ -24,7 +24,10 @@ public class FewShotPrompt implements PromptStrategy{
                Now answer in the SAME FORMAT.
 
                Q: %s
-               A:
+              A:
                """.formatted(userInput);
     }
 }
+/*
+yash
+ */
