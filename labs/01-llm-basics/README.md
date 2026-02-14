@@ -1,26 +1,30 @@
 
-# Lab 01: LLM Basics
+# Lab 01: LLM Basics with Spring Boot
 
 ## Objective
-Learn how to call a locally running Large Language Model (LLM)
-from a Spring Boot application.
+Understand how a Spring Boot application communicates with
+a locally running Large Language Model (LLM).
 
-## What you will build
-- Simple REST API
-- Prompt → LLM → Response flow
-- Ollama + CodeLlama integration
+## Architecture Flow
+Client → Spring Boot → Ollama → CodeLlama
 
-## Concepts Covered
-- LLM basics
-- Prompt lifecycle
-- Spring Boot REST interaction
+## What this lab demonstrates
+- No LLM SDK or dependency required
+- LLM accessed via HTTP API
+- Clean separation of controller, service, and model layers
 
-## Pre-requisites
-- Java 17+
-- Maven
-- Ollama installed
-- CodeLlama model pulled
+## Tech Stack
+- Java 21
+- Spring Boot 3.x
+- Ollama
+- CodeLlama
 
-## Outcome
-You will understand how LLM integration works end-to-end
-inside a Spring Boot application.
+## API Endpoint
+
+POST /api/chat
+
+Request:
+```json
+{
+  "prompt": "Explain JVM in simple words"
+}
