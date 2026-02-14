@@ -8,9 +8,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class WebClientConfig {
 
     @Bean
-    public WebClient webClient() {
+    public WebClient webClient(OllamaProperties props) {
         return WebClient.builder()
-                .baseUrl("http://localhost:11434")
+                .baseUrl(props.getBaseUrl())
                 .build();
     }
 }
