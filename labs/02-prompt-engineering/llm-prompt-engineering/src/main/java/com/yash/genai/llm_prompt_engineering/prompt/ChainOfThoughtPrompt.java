@@ -8,6 +8,8 @@ public class ChainOfThoughtPrompt implements PromptStrategy{
 
 
 
+    // chain of thought prompt strategy
+
     @Override
     public String buildPrompt(String userInput) {
         return """
