@@ -4,7 +4,7 @@ package com.yash.genai.rag_basics.service;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 @Component
 public class DocumentRetriever {
@@ -15,11 +15,20 @@ public class DocumentRetriever {
         this.documentStore = documentStore;
     }
 
-    public List<String>  retrieve(String query){
+    public List<String> retrieve(String query) {
+
+        var keywords = query.toLowerCase().split("\\s+");
+
         return documentStore.getDocuments().stream()
-                .filter(doc->
-                        doc.toLowerCase().contains(query.toLowerCase())
-                )
-                .collect(Collectors.toList());
+                .filter(doc -> {
+                    String lowerDoc = doc.toLowerCase();
+                    for (String keyword : keywords) {
+                        if (lowerDoc.contains(keyword)) {
+                            return true;
+                        }
+                    }
+                    return false;
+                })
+                .toList();
     }
 }

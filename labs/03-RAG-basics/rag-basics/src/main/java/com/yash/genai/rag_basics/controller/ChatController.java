@@ -32,9 +32,16 @@ public class ChatController {
     public ChatResponse chatWithRag(@RequestBody ChatRequest request) {
 
         var docs = documentRetriever.retrieve(request.getPrompt());
-        String response = ollamaService.askWithContext(request.getPrompt(), docs);
 
+        if (docs.isEmpty()) {
+            return new ChatResponse(
+                    "No relevant documents found. Unable to answer using RAG context."
+            );
+        }
+
+        String response = ollamaService.askWithContext(request.getPrompt(), docs);
         return new ChatResponse(response);
     }
+
 
 }
