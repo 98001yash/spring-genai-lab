@@ -1,4 +1,4 @@
-package com.yash.genai.rag_basics.config.controller;
+package com.yash.genai.rag_basics.controller;
 
 
 import com.yash.genai.rag_basics.dto.ChatRequest;
