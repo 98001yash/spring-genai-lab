@@ -7,6 +7,8 @@ import com.yash.genai.rag_basics.model.OllamaResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.util.List;
+
 @Service
 public class OllamaService {
 
@@ -40,4 +42,24 @@ public class OllamaService {
             return "LLM unavailable";
         }
     }
+
+    public String askWithContext(String question, List<String> contextDocs) {
+
+        String context = String.join("\n\n", contextDocs);
+
+        String prompt = """
+            You are a helpful assistant.
+            Answer the question ONLY using the context below.
+            If the answer is not in the context, say "I don't know".
+
+            Context:
+            %s
+
+            Question:
+            %s
+            """.formatted(context, question);
+
+        return ask(prompt);
+    }
+
 }
