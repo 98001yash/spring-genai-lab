@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="llm-prompt-engineering" />
+        <module name="rag-basics" />
         <module name="llm-basics" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="llm-basics" options="-parameters" />
       <module name="llm-prompt-engineering" options="-parameters" />
+      <module name="rag-basics" options="-parameters" />
     </option>
   </component>
 </project>
