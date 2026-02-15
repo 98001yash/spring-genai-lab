@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/labs/01-llm-basics/llm-basics/pom.xml" />
         <option value="$PROJECT_DIR$/labs/02-prompt-engineering/llm-prompt-engineering/pom.xml" />
         <option value="$PROJECT_DIR$/labs/03-RAG-basics/rag-basics/pom.xml" />
+        <option value="$PROJECT_DIR$/labs/04-vector-search/vector-search-demo/pom.xml" />
       </list>
     </option>
   </component>
