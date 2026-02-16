@@ -10,6 +10,7 @@
         <module name="rag-basics" />
         <module name="llm-basics" />
         <module name="vector-search-demo" />
+        <module name="tool-calling-demo" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
       <module name="llm-basics" options="-parameters" />
       <module name="llm-prompt-engineering" options="-parameters" />
       <module name="rag-basics" options="-parameters" />
+      <module name="tool-calling-demo" options="-parameters" />
       <module name="vector-search-demo" options="-parameters" />
     </option>
   </component>
