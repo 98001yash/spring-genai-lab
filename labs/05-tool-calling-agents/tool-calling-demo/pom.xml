@@ -14,10 +14,10 @@
 	</parent>
 
 	<groupId>com.yash.genai</groupId>
-	<artifactId>tools-calling-demo</artifactId>
+	<artifactId>tool-calling-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tools-calling-demo</name>
-	<description>tools0calling MCP basics with Spring Boot and Ollama</description>
+	<name>tool-calling-demo</name>
+	<description>tools calling MCP basics with Spring Boot and Ollama</description>
 
 	<properties>
 		<java.version>21</java.version>
